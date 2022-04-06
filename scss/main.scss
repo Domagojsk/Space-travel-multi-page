@@ -1,0 +1,188 @@
+@import 'colors';
+@import 'fonts';
+@import 'general';
+@import 'mixins';
+@import 'header';
+
+body {
+  background-image: url(/assets/home/background-home-desktop.jpg);
+  @include respond(medium) {
+    background-image: url(/assets/home/background-home-tablet.jpg);
+  }
+  @include respond(small) {
+    background-image: url(/assets/home/background-home-mobile.jpg);
+  }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 100%;
+    padding: 0 10.313rem 7.81rem 10.313rem;
+    @include respond(large) {
+      @include flex-direction(column);
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0 auto;
+    }
+    @include respond(medium) {
+      justify-content: center;
+    }
+    @include respond(small) {
+      justify-content: space-around;
+    }
+  }
+
+  .space-container {
+    height: 23.875rem;
+    width: 28.125rem;
+    text-align: left;
+    @include flex(space-between, flex-start, column);
+    @include respond(large) {
+      text-align: center;
+      margin-bottom: 6.5rem;
+      align-items: center;
+    }
+    @include respond(medium) {
+      height: 20.875rem;
+      width: 28.125rem;
+      margin-bottom: 8rem;
+    }
+
+    @include respond(small) {
+      height: 20.438rem;
+      width: 17.25rem;
+      margin: 0;
+    }
+  }
+
+  h5 {
+    font-family: $Barlow;
+    color: $primary-color;
+    font-size: 1.75rem;
+    letter-spacing: 4.75px;
+    text-transform: uppercase;
+    @include respond(medium) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      letter-spacing: 3.375px;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    @include respond(small) {
+      font-size: 1rem;
+      letter-spacing: 2.7px;
+      line-height: 1.2rem;
+    }
+  }
+
+  h1 {
+    font-size: 9.375rem;
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-family: $Bellefair;
+    font-weight: normal;
+
+    @include respond(medium) {
+      font-weight: 400;
+      line-height: 9.375rem;
+    }
+    @include respond(small) {
+      font-size: 5rem;
+      line-height: 6.25rem;
+    }
+  }
+
+  p {
+    color: $primary-color;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    letter-spacing: 1.5px;
+    font-family: $Barlow;
+
+    @include respond(medium) {
+      font-weight: 400;
+      line-height: 1.75rem;
+      font-size: 1rem;
+    }
+    @include respond(small) {
+      font-size: 0.938rem;
+      line-height: 1.563rem;
+    }
+  }
+
+  .explore-btn {
+    width: 17.125rem;
+    height: 17.125rem;
+    border-radius: 50%;
+    color: $primary-color;
+    cursor: pointer;
+    position: relative;
+    text-transform: uppercase;
+
+    @include respond(medium) {
+      width: 15.125rem;
+      height: 15.125rem;
+    }
+
+    @include respond(small) {
+      height: 9.375rem;
+      width: 9.375rem;
+    }
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+
+  .explore-btn ::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: 0.4s ease-out;
+  }
+  .explore-btn :hover::after {
+    color: $secondary-color;
+    height: 28.125rem;
+    width: 28.125rem;
+
+    @include respond(large) {
+      height: 20rem;
+      width: 20rem;
+    }
+
+    @include respond(medium) {
+      height: 20rem;
+      width: 20rem;
+    }
+
+    @include respond(small) {
+      height: 11.5rem;
+      width: 11.5rem;
+    }
+  }
+
+  .explore {
+    color: $main-color;
+    font-family: $Bellefair;
+    font-size: 2rem;
+    line-height: 2.292rem;
+    letter-spacing: 2px;
+    text-align: center;
+
+    @include respond(small) {
+      font-size: 1.25rem;
+      line-height: 1.438rem;
+      letter-spacing: 1.125px;
+    }
+  }
+}

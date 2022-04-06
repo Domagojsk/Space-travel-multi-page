@@ -1,0 +1,170 @@
+header {
+  @include flex(space-between, center, row);
+  margin: 2.5rem 0 0 3.44rem;
+  @include respond(large) {
+    margin: 0 0 0 3rem;
+  }
+  @include respond(medium) {
+    margin-left: 2.438rem;
+  }
+  @include respond(small) {
+    margin: 1.5rem 0 0 1.5rem;
+  }
+
+  .logo {
+    height: 3rem;
+    width: 3rem;
+    transition: 1.5s linear;
+    animation: logorotate 1.5s linear;
+    @include respond(small) {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+
+    @keyframes logorotate {
+      0% {
+        transform: rotate(0deg);
+        opacity: 0;
+      }
+      100% {
+        transform: rotate(360deg);
+        opacity: 1;
+      }
+    }
+  }
+
+  .hrline {
+    background: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    min-width: 1px;
+    height: 1px;
+    flex-grow: 1;
+    transform: translateX(25px);
+    @include respond(large) {
+      display: none;
+    }
+  }
+
+  .main-nav {
+    background: rgba(151, 151, 151, 0.2);
+    backdrop-filter: blur(1rem);
+    padding: 0 12.5rem 0 9.375rem;
+
+    @include respond(large) {
+      padding: 0 6rem 0 4rem;
+    }
+    @include respond(medium) {
+      padding: 0 2.875rem 0 3rem;
+    }
+  }
+
+  .primary-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 31.25rem;
+    z-index: 99;
+    @include respond(large) {
+      width: 30rem;
+    }
+    @include respond(medium) {
+      width: 22.25rem;
+    }
+    @include respond(small) {
+      position: fixed;
+      inset: 0 0 0 30%;
+      background-color: rgba(151, 151, 151, 0.3);
+      backdrop-filter: blur(1rem);
+      @include flex(start, flex-start, column);
+      padding: 6.2rem 2rem;
+      gap: 1.8rem;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-out;
+      z-index: 999;
+    }
+  }
+  .activeNav {
+    transform: translateX(0%);
+  }
+
+  span {
+    font-weight: bold;
+
+    @include respond(medium) {
+      display: none;
+    }
+    @include respond(small) {
+      display: inline-block;
+      font-weight: 700;
+      line-height: 1.188rem;
+      letter-spacing: 2.7px;
+    }
+  }
+
+  .active {
+    border-bottom: 2px solid $secondary-color;
+  }
+
+  .nav-links {
+    display: inline;
+    color: $secondary-color;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: $Barlow;
+    letter-spacing: 2.5px;
+    transition: 0.3s ease-in-out;
+    padding: 2rem 0;
+
+    @include respond(large) {
+      font-size: 1rem;
+    }
+    @include respond(medium) {
+      padding: 2.438rem 0;
+      font-size: 1.125rem;
+    }
+    @include respond(small) {
+      padding: 0.2rem 0.2rem;
+      font-size: 1rem;
+      line-height: 1.188rem;
+      letter-spacing: 2.7px;
+    }
+  }
+
+  li {
+    padding: 2rem 0;
+    @include respond(small) {
+      padding: 0;
+    }
+  }
+
+  .nav-links:hover {
+    border-bottom: 2px solid $hover-color;
+  }
+  .open-menu {
+    display: none;
+  }
+  .open-menu {
+    position: absolute;
+    top: 2.063rem;
+    right: 1.5rem;
+    width: 1.5rem;
+    height: 1.313rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    @include respond(small) {
+      display: inline-block;
+    }
+  }
+  .close-menu {
+    position: absolute;
+    top: 2.063rem;
+    right: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: none;
+    z-index: 9999;
+  }
+}
