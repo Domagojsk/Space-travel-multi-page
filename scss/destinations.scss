@@ -6,13 +6,29 @@
 
 body {
   background-image: url(/assets/destination/background-destination-desktop.jpg);
+  overflow: hidden;
+  @include respond(medium) {
+    background-image: url(/assets/destination/background-destination-tablet.jpg);
+  }
+  @include respond(small) {
+    background-image: url(/assets/destination/background-destination-mobile.jpg);
+    min-height: 53.125rem;
+  }
 
   #destinations-container {
     @include flex(space-between, center, row);
+
+    @include respond(large) {
+      flex-direction: column;
+    }
   }
 
   .destination-box {
     @include flex(space-between, center, column);
+
+    @include respond(small) {
+      justify-content: space-evenly;
+    }
   }
 
   .destinations-title {
@@ -24,6 +40,28 @@ body {
     line-height: 2.125rem;
     text-transform: uppercase;
     margin-top: 4.75rem;
+
+    @include respond(large) {
+      letter-spacing: 4px;
+      line-height: 1.8rem;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      position: absolute;
+      left: 5%;
+    }
+
+    @include respond(medium) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      letter-spacing: 3.375px;
+    }
+    @include respond(small) {
+      position: static;
+      font-size: 1rem;
+      letter-spacing: 2.7px;
+      line-height: 1.188rem;
+      margin-top: 1.5rem;
+    }
   }
 
   .destinations-title span {
@@ -35,12 +73,43 @@ body {
     line-height: 2.125rem;
     mix-blend-mode: normal;
     opacity: 0.25;
+
+    @include respond(large) {
+      letter-spacing: 4px;
+      line-height: 1.8rem;
+      font-size: 1.5rem;
+    }
+
+    @include respond(medium) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      letter-spacing: 3.375px;
+    }
+
+    @include respond(small) {
+      font-size: 1rem;
+      letter-spacing: 2.7px;
+      line-height: 1.188rem;
+      margin-right: 0.73rem;
+    }
   }
 
   .destination-image {
     height: 27.813rem;
     width: 27.813rem;
     margin: 6.063rem 0 7rem 14.375rem;
+
+    @include respond(large) {
+      height: 18.75rem;
+      width: 18.75rem;
+      margin: 7.75rem auto 0 auto;
+    }
+
+    @include respond(small) {
+      height: 10.625rem;
+      width: 10.625rem;
+      margin: 2rem auto 0 auto;
+    }
   }
 
   .destinations-info {
@@ -50,12 +119,34 @@ body {
     justify-content: center;
     flex-direction: column;
     margin: 10.875rem 10.188rem 7.375rem 0;
+
+    @include respond(large) {
+      margin: 0;
+      text-align: center;
+    }
+    @include respond(medium) {
+      height: 25.6rem;
+      width: 35.813rem;
+    }
+
+    @include respond(small) {
+      width: 20.438rem;
+      height: 33.75rem;
+      justify-content: flex-start;
+    }
+  }
+
+  .destinations-nav {
+    margin-top: 1.625rem;
   }
 
   .destinations-nav-item {
     display: inline-block;
     margin-right: 1.6rem;
     margin-bottom: 0.3rem;
+    @include respond(medium) {
+      margin: 0 0.8rem 0.3rem 0.8rem;
+    }
   }
 
   .destinations-nav-link {
@@ -67,6 +158,12 @@ body {
     font-weight: 400;
     letter-spacing: 2.7px;
     padding-bottom: 8px;
+
+    @include respond(small) {
+      font-size: 0.875rem;
+      line-height: 1.063rem;
+      letter-spacing: 2.3625px;
+    }
 
     &:hover {
       border-bottom: 3px solid $primary-color;
@@ -86,6 +183,29 @@ body {
     font-weight: 400;
     line-height: 7.188rem;
     color: $secondary-color;
+    text-transform: uppercase;
+
+    @include respond(large) {
+      font-size: 5.5rem;
+      line-height: 5.57rem;
+      margin-top: 1.7rem;
+    }
+
+    @include respond(medium) {
+      font-size: 5rem;
+      line-height: 5.75rem;
+    }
+    @include respond(small) {
+      font-size: 3.5rem;
+      line-height: 4rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .destination-text-container {
+    @include respond(large) {
+      @include flex(center, center, column);
+    }
   }
 
   .destination-description {
@@ -96,6 +216,30 @@ body {
     line-height: 2rem;
     height: 8rem;
     width: 27.75rem;
+
+    @include respond(large) {
+      font-size: 1rem;
+      text-align: center;
+      line-height: 1.75rem;
+      width: 38rem;
+      height: 5.25rem;
+    }
+
+    @include respond(medium) {
+      width: 35.813rem;
+      height: 5.25rem;
+      letter-spacing: 1.3px;
+      margin-bottom: 3.063rem;
+    }
+
+    @include respond(small) {
+      height: 7.813rem;
+      width: 20.438rem;
+      font-size: 0.938rem;
+      line-height: 1.563rem;
+      letter-spacing: 1;
+      margin: 0 1.5rem 2rem 1.5rem;
+    }
   }
 
   .line {
@@ -104,10 +248,29 @@ body {
     height: 1px;
     flex-grow: 1;
     margin: 3.375rem 0 1.75rem 0;
+
+    @include respond(large) {
+      display: none;
+    }
   }
 
   .destinations-details {
     display: flex;
+
+    @include respond(large) {
+      justify-content: space-around;
+      align-items: center;
+      border-top: 2px solid #383b4b;
+      padding-top: 1.5rem;
+    }
+    @include respond(medium) {
+      justify-content: space-evenly;
+    }
+
+    @include respond(small) {
+      @include flex-direction(column);
+      justify-content: space-between;
+    }
   }
 
   .moon-subheading {
@@ -122,13 +285,23 @@ body {
 
   .destinations-details > div {
     padding-right: 4.938rem;
+    @include respond(large) {
+      padding: 0;
+    }
   }
 
   .destination-distance,
   .travel-time {
+    text-transform: uppercase;
     font-family: $Bellefair;
     font-size: 1.75rem;
     color: $secondary-color;
     line-height: 2rem;
+  }
+
+  .destination-distance {
+    @include respond(small) {
+      margin-bottom: 2rem;
+    }
   }
 }

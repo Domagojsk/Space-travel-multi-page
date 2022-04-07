@@ -112,14 +112,14 @@ header {
     text-transform: uppercase;
     font-family: $Barlow;
     letter-spacing: 2.5px;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease;
     padding: 2rem 0;
 
     @include respond(large) {
       font-size: 1rem;
     }
     @include respond(medium) {
-      padding: 2.438rem 0;
+      padding: 2rem 0;
       font-size: 1.125rem;
     }
     @include respond(small) {

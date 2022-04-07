@@ -50,7 +50,7 @@ header {
   margin: 2.5rem 0 0 3.44rem;
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1150px) {
   header {
     margin: 0 0 0 3rem;
   }
@@ -123,7 +123,7 @@ header .hrline {
           transform: translateX(25px);
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1150px) {
   header .hrline {
     display: none;
   }
@@ -136,7 +136,7 @@ header .main-nav {
   padding: 0 12.5rem 0 9.375rem;
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1150px) {
   header .main-nav {
     padding: 0 6rem 0 4rem;
   }
@@ -159,7 +159,7 @@ header .primary-nav {
   z-index: 99;
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1150px) {
   header .primary-nav {
     width: 30rem;
   }
@@ -238,12 +238,12 @@ header .nav-links {
   text-transform: uppercase;
   font-family: "Barlow Condensed", sans-serif;
   letter-spacing: 2.5px;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
   padding: 2rem 0;
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 1150px) {
   header .nav-links {
     font-size: 1rem;
   }
@@ -251,7 +251,7 @@ header .nav-links {
 
 @media (max-width: 768px) {
   header .nav-links {
-    padding: 2.438rem 0;
+    padding: 2rem 0;
     font-size: 1.125rem;
   }
 }
@@ -313,6 +313,20 @@ header .close-menu {
 
 body {
   background-image: url(/assets/destination/background-destination-desktop.jpg);
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: url(/assets/destination/background-destination-tablet.jpg);
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url(/assets/destination/background-destination-mobile.jpg);
+    min-height: 53.125rem;
+  }
 }
 
 body #destinations-container {
@@ -331,6 +345,15 @@ body #destinations-container {
           flex-direction: row;
 }
 
+@media (max-width: 1150px) {
+  body #destinations-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 body .destination-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -347,6 +370,14 @@ body .destination-box {
           flex-direction: column;
 }
 
+@media (max-width: 500px) {
+  body .destination-box {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
 body .destinations-title {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 400;
@@ -356,6 +387,35 @@ body .destinations-title {
   line-height: 2.125rem;
   text-transform: uppercase;
   margin-top: 4.75rem;
+}
+
+@media (max-width: 1150px) {
+  body .destinations-title {
+    letter-spacing: 4px;
+    line-height: 1.8rem;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  body .destinations-title {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: 3.375px;
+  }
+}
+
+@media (max-width: 500px) {
+  body .destinations-title {
+    position: static;
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+    line-height: 1.188rem;
+    margin-top: 1.5rem;
+  }
 }
 
 body .destinations-title span {
@@ -369,10 +429,51 @@ body .destinations-title span {
   opacity: 0.25;
 }
 
+@media (max-width: 1150px) {
+  body .destinations-title span {
+    letter-spacing: 4px;
+    line-height: 1.8rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body .destinations-title span {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: 3.375px;
+  }
+}
+
+@media (max-width: 500px) {
+  body .destinations-title span {
+    font-size: 1rem;
+    letter-spacing: 2.7px;
+    line-height: 1.188rem;
+    margin-right: 0.73rem;
+  }
+}
+
 body .destination-image {
   height: 27.813rem;
   width: 27.813rem;
   margin: 6.063rem 0 7rem 14.375rem;
+}
+
+@media (max-width: 1150px) {
+  body .destination-image {
+    height: 18.75rem;
+    width: 18.75rem;
+    margin: 7.75rem auto 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  body .destination-image {
+    height: 10.625rem;
+    width: 10.625rem;
+    margin: 2rem auto 0 auto;
+  }
 }
 
 body .destinations-info {
@@ -391,10 +492,44 @@ body .destinations-info {
   margin: 10.875rem 10.188rem 7.375rem 0;
 }
 
+@media (max-width: 1150px) {
+  body .destinations-info {
+    margin: 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body .destinations-info {
+    height: 25.6rem;
+    width: 35.813rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body .destinations-info {
+    width: 20.438rem;
+    height: 33.75rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+body .destinations-nav {
+  margin-top: 1.625rem;
+}
+
 body .destinations-nav-item {
   display: inline-block;
   margin-right: 1.6rem;
   margin-bottom: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  body .destinations-nav-item {
+    margin: 0 0.8rem 0.3rem 0.8rem;
+  }
 }
 
 body .destinations-nav-link {
@@ -406,6 +541,14 @@ body .destinations-nav-link {
   font-weight: 400;
   letter-spacing: 2.7px;
   padding-bottom: 8px;
+}
+
+@media (max-width: 500px) {
+  body .destinations-nav-link {
+    font-size: 0.875rem;
+    line-height: 1.063rem;
+    letter-spacing: 2.3625px;
+  }
 }
 
 body .destinations-nav-link:hover {
@@ -425,6 +568,48 @@ body .destination-name {
   font-weight: 400;
   line-height: 7.188rem;
   color: #ffffff;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1150px) {
+  body .destination-name {
+    font-size: 5.5rem;
+    line-height: 5.57rem;
+    margin-top: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body .destination-name {
+    font-size: 5rem;
+    line-height: 5.75rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body .destination-name {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1150px) {
+  body .destination-text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 body .destination-description {
@@ -437,6 +622,36 @@ body .destination-description {
   width: 27.75rem;
 }
 
+@media (max-width: 1150px) {
+  body .destination-description {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.75rem;
+    width: 38rem;
+    height: 5.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body .destination-description {
+    width: 35.813rem;
+    height: 5.25rem;
+    letter-spacing: 1.3px;
+    margin-bottom: 3.063rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body .destination-description {
+    height: 7.813rem;
+    width: 20.438rem;
+    font-size: 0.938rem;
+    line-height: 1.563rem;
+    letter-spacing: 1;
+    margin: 0 1.5rem 2rem 1.5rem;
+  }
+}
+
 body .line {
   background: #383b4b;
   min-width: 1px;
@@ -447,10 +662,48 @@ body .line {
   margin: 3.375rem 0 1.75rem 0;
 }
 
+@media (max-width: 1150px) {
+  body .line {
+    display: none;
+  }
+}
+
 body .destinations-details {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 1150px) {
+  body .destinations-details {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top: 2px solid #383b4b;
+    padding-top: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body .destinations-details {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 500px) {
+  body .destinations-details {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 body .moon-subheading {
@@ -468,11 +721,24 @@ body .destinations-details > div {
   padding-right: 4.938rem;
 }
 
+@media (max-width: 1150px) {
+  body .destinations-details > div {
+    padding: 0;
+  }
+}
+
 body .destination-distance,
 body .travel-time {
+  text-transform: uppercase;
   font-family: "Bellefair", serif;
   font-size: 1.75rem;
   color: #ffffff;
   line-height: 2rem;
+}
+
+@media (max-width: 500px) {
+  body .destination-distance {
+    margin-bottom: 2rem;
+  }
 }
 /*# sourceMappingURL=destinations.css.map */

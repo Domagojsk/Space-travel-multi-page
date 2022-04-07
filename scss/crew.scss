@@ -1,0 +1,47 @@
+@import 'colors';
+@import 'fonts';
+@import 'general';
+@import 'mixins';
+@import 'header';
+
+body {
+  background-image: url(/assets/crew/background-crew-desktop.jpg);
+
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .crew-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+  }
+
+  .crew-title {
+    font-family: $Barlow;
+    font-weight: 400;
+    color: $secondary-color;
+    font-size: 1.75rem;
+    letter-spacing: 4.725px;
+    line-height: 2.125rem;
+    text-transform: uppercase;
+    margin-top: 4.75rem;
+  }
+
+  .crew-title span {
+    font-family: $Barlow;
+    font-weight: 700;
+    color: $primary-color;
+    font-size: 1.75rem;
+    letter-spacing: 4.725px;
+    line-height: 2.125rem;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+  }
+}

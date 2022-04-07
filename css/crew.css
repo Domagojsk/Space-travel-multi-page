@@ -312,272 +312,62 @@ header .close-menu {
 }
 
 body {
-  background-image: url(/assets/home/background-home-desktop.jpg);
+  background-image: url(/assets/crew/background-crew-desktop.jpg);
 }
 
-@media (max-width: 768px) {
-  body {
-    background-image: url(/assets/home/background-home-tablet.jpg);
-  }
-}
-
-@media (max-width: 500px) {
-  body {
-    background-image: url(/assets/home/background-home-mobile.jpg);
-  }
-}
-
-body section {
+body main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  height: 100%;
-  padding: 0 10.313rem 7.81rem 10.313rem;
 }
 
-@media (max-width: 1150px) {
-  body section {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 768px) {
-  body section {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media (max-width: 500px) {
-  body section {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
-body .space-container {
-  height: 23.875rem;
-  width: 28.125rem;
-  text-align: left;
+body .crew-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-@media (max-width: 1150px) {
-  body .space-container {
-    text-align: center;
-    margin-bottom: 6.5rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media (max-width: 768px) {
-  body .space-container {
-    height: 20.875rem;
-    width: 28.125rem;
-    margin-bottom: 8rem;
-  }
-}
-
-@media (max-width: 500px) {
-  body .space-container {
-    height: 20.438rem;
-    width: 17.25rem;
-    margin: 0;
-  }
-}
-
-body h5 {
-  font-family: "Barlow Condensed", sans-serif;
-  color: #d0d6f9;
-  font-size: 1.75rem;
-  letter-spacing: 4.75px;
-  text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-  body h5 {
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-    letter-spacing: 3.375px;
-    font-style: normal;
-    font-weight: 400;
-  }
-}
-
-@media (max-width: 500px) {
-  body h5 {
-    font-size: 1rem;
-    letter-spacing: 2.7px;
-    line-height: 1.2rem;
-  }
-}
-
-body h1 {
-  font-size: 9.375rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-family: "Bellefair", serif;
-  font-weight: normal;
-}
-
-@media (max-width: 768px) {
-  body h1 {
-    font-weight: 400;
-    line-height: 9.375rem;
-  }
-}
-
-@media (max-width: 500px) {
-  body h1 {
-    font-size: 5rem;
-    line-height: 6.25rem;
-  }
-}
-
-body p {
-  color: #d0d6f9;
-  font-size: 1.125rem;
-  line-height: 1.875rem;
-  letter-spacing: 1.5px;
-  font-family: "Barlow Condensed", sans-serif;
-}
-
-@media (max-width: 768px) {
-  body p {
-    font-weight: 400;
-    line-height: 1.75rem;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 500px) {
-  body p {
-    font-size: 0.938rem;
-    line-height: 1.563rem;
-  }
-}
-
-body .explore-btn {
-  width: 17.125rem;
-  height: 17.125rem;
-  border-radius: 50%;
-  color: #d0d6f9;
-  cursor: pointer;
-  position: relative;
-  text-transform: uppercase;
-}
-
-@media (max-width: 768px) {
-  body .explore-btn {
-    width: 15.125rem;
-    height: 15.125rem;
-  }
-}
-
-@media (max-width: 500px) {
-  body .explore-btn {
-    height: 9.375rem;
-    width: 9.375rem;
-  }
-}
-
-body .explore-btn:hover {
-  background-color: #ffffff;
-}
-
-body .explore-btn ::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 100%;
   width: 100%;
-  z-index: 3;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  -webkit-transition: 0.4s ease-out;
-  transition: 0.4s ease-out;
 }
 
-body .explore-btn :hover::after {
+body .crew-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
   color: #ffffff;
-  height: 28.125rem;
-  width: 28.125rem;
+  font-size: 1.75rem;
+  letter-spacing: 4.725px;
+  line-height: 2.125rem;
+  text-transform: uppercase;
+  margin-top: 4.75rem;
 }
 
-@media (max-width: 1150px) {
-  body .explore-btn :hover::after {
-    height: 20rem;
-    width: 20rem;
-  }
+body .crew-title span {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  color: #d0d6f9;
+  font-size: 1.75rem;
+  letter-spacing: 4.725px;
+  line-height: 2.125rem;
+  mix-blend-mode: normal;
+  opacity: 0.25;
 }
-
-@media (max-width: 768px) {
-  body .explore-btn :hover::after {
-    height: 20rem;
-    width: 20rem;
-  }
-}
-
-@media (max-width: 500px) {
-  body .explore-btn :hover::after {
-    height: 11.5rem;
-    width: 11.5rem;
-  }
-}
-
-body .explore {
-  color: #0b0d17;
-  font-family: "Bellefair", serif;
-  font-size: 2rem;
-  line-height: 2.292rem;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-@media (max-width: 500px) {
-  body .explore {
-    font-size: 1.25rem;
-    line-height: 1.438rem;
-    letter-spacing: 1.125px;
-  }
-}
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=crew.css.map */
