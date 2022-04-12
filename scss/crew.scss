@@ -5,22 +5,67 @@
 @import 'header';
 
 body {
+  position: relative;
+
   background-image: url(/assets/crew/background-crew-desktop.jpg);
 
+  @include respond(medium) {
+    background-image: url(/assets/crew/background-crew-tablet.jpg);
+  }
+  @include respond(small) {
+    background-image: url(/assets/crew/background-crew-mobile.jpg);
+  }
+
   main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    @include flex(center, flex-end, row);
+    padding: 0 8.563rem 0 10.313rem;
+    height: 100%;
+    @include respond(medium) {
+      padding: 0;
+      @include flex-direction(column);
+      align-items: center;
+      justify-content: flex-start;
+    }
+    @include respond(small) {
+      flex-direction: column-reverse;
+    }
   }
 
   .crew-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    @include flex(space-between, flex-start, column);
     height: 100%;
     width: 100%;
+    padding-bottom: 5.875rem;
+
+    @include respond(medium) {
+      padding: 0;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+
+    @include respond(small) {
+      flex-direction: column-reverse;
+      justify-content: center;
+      border-top: 1px solid $border-color;
+      width: 20.438rem;
+    }
+  }
+
+  .member-container {
+    @include respond(medium) {
+      width: 28.625rem;
+      height: 14.5rem;
+      margin-top: 3.75rem;
+    }
+    @include respond(small) {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: column;
+    }
   }
 
   .crew-title {
@@ -32,6 +77,30 @@ body {
     line-height: 2.125rem;
     text-transform: uppercase;
     margin-top: 4.75rem;
+
+    @include respond(large) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(medium) {
+      font-size: 1.25rem;
+      letter-spacing: 3.375px;
+      line-height: 1.5rem;
+      margin-top: 2.5rem;
+      margin-left: 2.406rem;
+      align-self: flex-start;
+    }
+
+    @include respond(small) {
+      align-self: center;
+      margin-left: 0;
+      font-size: 1rem;
+      letter-spacing: 2.7px;
+      line-height: 1.188rem;
+      position: absolute;
+      top: 5.5rem;
+      margin-top: 0;
+    }
   }
 
   .crew-title span {
@@ -43,5 +112,180 @@ body {
     line-height: 2.125rem;
     mix-blend-mode: normal;
     opacity: 0.25;
+
+    @include respond(large) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(medium) {
+      font-size: 1.25rem;
+      letter-spacing: 3.375px;
+      line-height: 1.5rem;
+      margin-right: 0.4rem;
+    }
+
+    @include respond(small) {
+      font-size: 1rem;
+      letter-spacing: 2.7px;
+      line-height: 1.188rem;
+    }
+  }
+
+  .member-title {
+    font-family: $Bellefair;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.313rem;
+    text-transform: uppercase;
+    color: $secondary-color;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+
+    @include respond(large) {
+      font-size: 1.75rem;
+    }
+
+    @include respond(medium) {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+    }
+
+    @include respond(small) {
+      font-size: 1rem;
+      line-height: 1.125rem;
+    }
+  }
+
+  .member-name {
+    font-family: $Bellefair;
+    color: $secondary-color;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    margin-top: 0.938rem;
+
+    @include respond(large) {
+      font-size: 2.6rem;
+    }
+
+    @include respond(medium) {
+      font-size: 2.5rem;
+      line-height: 2.875rem;
+      margin-top: 8px;
+    }
+
+    @include respond(small) {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+    }
+  }
+
+  .member-info {
+    width: 27.75rem;
+    height: 8rem;
+    font-family: $Barlow;
+    color: $primary-color;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    text-align: left;
+    margin-top: 1.688rem;
+
+    @include respond(medium) {
+      font-size: 1rem;
+      line-height: 1.75rem;
+      letter-spacing: 1px;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      margin-top: 1rem;
+      width: 28.6rem;
+      height: 5.25rem;
+    }
+
+    @include respond(small) {
+      height: 6.25rem;
+      width: 20.438rem;
+      font-size: 0.938rem;
+      line-height: 1.563rem;
+    }
+  }
+
+  .crew-nav {
+    align-items: center;
+    width: 8.25rem;
+    height: 0.938rem;
+
+    @include respond(medium) {
+      margin: 0 auto;
+      height: 0.625rem;
+      width: 5.5rem;
+    }
+  }
+
+  .crew-navList {
+    @include flex(flex-start, center, row);
+    gap: 1.5rem;
+
+    @include respond(medium) {
+      gap: 1rem;
+    }
+  }
+
+  .crew-nav-item {
+    background-color: $primary-color;
+    border-radius: 50%;
+    height: 0.938rem;
+    mix-blend-mode: normal;
+    opacity: 0.17;
+
+    &:hover {
+      background: $primary-color;
+      opacity: 50%;
+    }
+
+    @include respond(medium) {
+      height: 0.625rem;
+    }
+  }
+
+  .active-crew-member {
+    background: $secondary-color;
+    opacity: 100%;
+  }
+  .crew-nav-dot {
+    display: inline-block;
+    width: 0.938rem;
+    height: 0.938rem;
+
+    @include respond(medium) {
+      width: 0.625rem;
+      height: 0.625rem;
+    }
+  }
+
+  .crew-member-img {
+    min-height: 44.5rem;
+    min-width: 35.504rem;
+
+    @include respond(large) {
+      min-width: 18rem;
+      min-height: 25rem;
+    }
+
+    @include respond(medium) {
+      min-height: 35.75rem;
+      min-width: 28.523rem;
+      margin-top: 2.5rem;
+    }
+
+    @include respond(small) {
+      min-width: 11.063rem;
+      min-height: 13.875rem;
+      max-width: 80%;
+      max-height: 75%;
+      margin-top: 4.688rem;
+      margin-left: 2.164rem;
+    }
   }
 }

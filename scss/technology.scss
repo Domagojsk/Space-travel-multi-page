@@ -1,0 +1,351 @@
+@import 'colors';
+@import 'fonts';
+@import 'general';
+@import 'mixins';
+@import 'header';
+
+body {
+  background-image: url(/assets/technology/background-technology-desktop.jpg);
+
+  @include respond(medium) {
+    background-image: url(/assets/technology/background-technology-tablet.jpg);
+  }
+
+  @include respond(small) {
+    background-image: url(/assets/technology/background-technology-mobile.jpg);
+  }
+
+  #technology {
+    padding-left: 10.406rem;
+    width: 100%;
+    height: 100%;
+    @include respond(xlarge) {
+      padding-left: 5rem;
+    }
+    @include respond(large) {
+      padding-left: 2rem;
+    }
+
+    @include respond(medium) {
+      padding: 0;
+    }
+  }
+
+  .technology-launch {
+    font-family: $Barlow;
+    font-weight: 400;
+    color: $secondary-color;
+    font-size: 1.75rem;
+    letter-spacing: 4.725px;
+    line-height: 2.125rem;
+    text-transform: uppercase;
+    margin-top: 4.74rem;
+    @include respond(xlarge) {
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      line-height: 2rem;
+    }
+
+    @include respond(medium) {
+      margin-top: 2.5rem;
+      letter-spacing: 3.374px;
+      line-height: 1.5rem;
+      font-size: 1.25rem;
+    }
+
+    @include respond(small) {
+      text-align: center;
+      margin-top: 1.5rem;
+      letter-spacing: 2.7px;
+      font-size: 1rem;
+      line-height: 1.188rem;
+    }
+  }
+
+  .technology-launch span {
+    font-family: $Barlow;
+    font-weight: 700;
+    color: $primary-color;
+    font-size: 1.75rem;
+    letter-spacing: 4.725px;
+    line-height: 2.125rem;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+
+    @include respond(xlarge) {
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      line-height: 2rem;
+    }
+
+    @include respond(medium) {
+      letter-spacing: 3.374px;
+      line-height: 1.5rem;
+      font-size: 1.25rem;
+    }
+
+    @include respond(small) {
+      letter-spacing: 2.7px;
+      font-size: 1rem;
+      line-height: 1.188rem;
+    }
+  }
+
+  .technology-container {
+    @include flex(space-between, center, row);
+    width: 100%;
+    height: 100%;
+    padding-bottom: 6.313rem;
+
+    @include respond(medium) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto 1fr;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .technology-nav {
+    @include respond(medium) {
+      grid-column: 1;
+      grid-row: 2;
+    }
+  }
+
+  .technology-navList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 5rem;
+
+    @include respond(medium) {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0;
+      gap: 1rem;
+    }
+
+    @include respond(small) {
+    }
+  }
+
+  .technology-nav-item {
+    border: 1px solid rgba(208, 214, 249, 0.3);
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
+    background-color: transparent;
+    &:hover {
+      border: 1px solid $secondary-color;
+    }
+    @include respond(large) {
+      height: 3.625rem;
+      width: 3.625rem;
+    }
+
+    @include respond(small) {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  .technology-nav-circle {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    color: $primary-color;
+    font-family: $Bellefair;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 2.313rem;
+    @include respond(large) {
+      height: 3.625rem;
+      width: 3.625rem;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      letter-spacing: 1.5px;
+    }
+
+    @include respond(small) {
+      height: 2.5rem;
+      width: 2.5rem;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      line-height: 1.125rem;
+    }
+  }
+
+  .active-technology {
+    border: 1px solid $secondary-color;
+    background-color: $secondary-color;
+  }
+
+  .active-technology a {
+    color: $main-color;
+  }
+
+  .technology-text-box {
+    @include flex(center, flex-start, column);
+    min-width: 29.375rem;
+    min-height: 18.938rem;
+    width: 100%;
+    height: 100%;
+    padding: 0 8.135rem 0 5rem;
+    text-align: left;
+
+    @include respond(xlarge) {
+      padding: 0 2rem 0 2rem;
+    }
+
+    @include respond(large) {
+      padding: 0 1rem 0 1rem;
+      min-width: 28.625rem;
+      min-height: 14.813rem;
+    }
+
+    @include respond(medium) {
+      grid-row: 3;
+      grid-column: 1;
+      min-width: 28.625rem;
+      max-height: 14.813rem;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      align-content: center;
+      justify-items: center;
+      padding: 0 1.75rem 0 1.75rem;
+      margin: 0;
+    }
+
+    @include respond(small) {
+      min-width: 20.438rem;
+      min-height: 13.75rem;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .technology-title {
+    font-family: $Barlow;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+    line-height: 1.188rem;
+    color: $primary-color;
+    margin: 0;
+
+    @include respond(small) {
+      font-size: 0.875rem;
+      letter-spacing: 2.3625px;
+      line-height: 1.063rem;
+    }
+  }
+
+  .technology-name {
+    font-family: $Bellefair;
+    color: $secondary-color;
+    font-weight: 400;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+    width: 29.375rem;
+    height: 4rem;
+    margin: 0.7rem 0 1.163rem 0;
+    @include respond(xlarge) {
+      font-size: 3rem;
+    }
+
+    @include respond(large) {
+      font-size: 2.5rem;
+      line-height: 2.875;
+    }
+
+    @include respond(medium) {
+      margin: 0;
+      max-width: 28.563rem;
+      max-height: 2.875rem;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include respond(small) {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      max-width: 20.438rem;
+      max-height: 1.75rem;
+    }
+  }
+
+  .technology-info {
+    font-family: $Barlow;
+    color: $primary-color;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    letter-spacing: 1.6px;
+    text-align: left;
+    min-width: 27.75rem;
+    height: 12rem;
+
+    @include respond(large) {
+      font-size: 1rem;
+      line-height: 1.75rem;
+      letter-spacing: 1px;
+    }
+
+    @include respond(medium) {
+      max-width: 28.625rem;
+      max-height: 8.75rem;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 1.4px;
+      margin-top: 3rem;
+    }
+
+    @include respond(small) {
+      font-size: 0.938rem;
+      line-height: 1.563rem;
+      letter-spacing: 2px;
+      min-width: 20.438rem;
+      min-height: 10.938rem;
+      max-height: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
+  .technology-img {
+    min-width: 32.188rem;
+    min-height: 32.938rem;
+
+    @include respond(large) {
+      min-width: 10rem;
+      min-height: 10rem;
+      width: 100%;
+      height: 100%;
+    }
+
+    @include respond(medium) {
+      grid-row: 1;
+      grid-column: 1;
+      width: 100%;
+      height: 100%;
+      margin-top: 3.75rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @include respond(small) {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

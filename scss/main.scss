@@ -118,10 +118,11 @@ body {
     width: 17.125rem;
     height: 17.125rem;
     border-radius: 50%;
-    color: $primary-color;
+    background-color: $secondary-color;
     cursor: pointer;
     position: relative;
     text-transform: uppercase;
+    @include flex(center, center, row);
 
     @include respond(medium) {
       width: 15.125rem;
@@ -131,9 +132,6 @@ body {
     @include respond(small) {
       height: 9.375rem;
       width: 9.375rem;
-    }
-    &:hover {
-      background-color: $secondary-color;
     }
   }
 
