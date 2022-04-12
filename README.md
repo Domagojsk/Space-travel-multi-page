@@ -29,12 +29,17 @@ Users should be able to:
 - View each page and be able to toggle between the tabs to see new information
 
 ### Screenshot
-
+-Desktop Layout 1440x900
 ![](./screenshots/screenshot1.png)
-![](screenshots./screenshot2.png)
-![](screenshots./screenshot3.png)
-![](screenshots./screenshot4.png)
+![](./screenshots/screenshot2.png)
+![](./screenshots/screenshot3.png)
+![](./screenshots/screenshot4.png)
 
+-Mobile Layout (375 x 710) 
+![](./screenshots/screenshot-mobile1.png)
+![](./screenshots/screenshot-mobile2.png)
+![](./screenshots/screenshot-mobile3.png)
+![](./screenshots/screenshot-mobile4.png)
 ### Links
 
 - Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/responsive-multi-page-r1kXyVQ45)
